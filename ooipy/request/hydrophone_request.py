@@ -356,24 +356,24 @@ def __get_mseed_urls(day_str, node, verbose):
         available for specified date, None is returned.
     '''
 
-    if node == '/LJ01D':  # LJ01D'  Oregon Shelf Base Seafloor
+    if node == 'LJ01D':  # Oregon Shelf Base Seafloor
         array = '/CE02SHBP'
         instrument = '/11-HYDBBA106'
-    if node == '/LJ01A':  # LJ01A Oregon Slope Base Seafloore
+    if node == 'LJ01A':  # Oregon Slope Base Seafloore
         array = '/RS01SLBS'
         instrument = '/09-HYDBBA102'
-    if node == '/PC01A':  # Oregan Slope Base Shallow
+    if node == 'PC01A':  # Oregan Slope Base Shallow
         array = '/RS01SBPS'
         instrument = '/08-HYDBBA103'
-    if node == '/PC03A':  # Axial Base Shallow Profiler
+    if node == 'PC03A':  # Axial Base Shallow Profiler
         array = '/RS03AXPS'
         instrument = '/08-HYDBBA303'
-    if node == '/LJ01C':  # Oregon Offshore Base Seafloor
+    if node == 'LJ01C':  # Oregon Offshore Base Seafloor
         array = '/CE04OSBP'
         instrument = '/11-HYDBBA105'
 
-    mainurl = 'https://rawdata.oceanobservatories.org/files' + array + node \
-              + instrument + day_str
+    mainurl = 'https://rawdata.oceanobservatories.org/files' + array + '/'\
+         + node + instrument + day_str
 
     FS = fsspec.filesystem('http')
 

@@ -501,6 +501,10 @@ class HydrophoneData(Trace):
 
         return self.psd_list
 
+    def __get_lat_lons(self, node):
+        '''
+
+        '''
 
 def _spectrogram_mp_helper(ooi_hyd_data_obj, win, L, avg_time, overlap):
     """
